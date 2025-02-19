@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme{
+    --breakpoint-sm: 300px;
+    --color-red: hsl(348, 97%, 39%);
+}
