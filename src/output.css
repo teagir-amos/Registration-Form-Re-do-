@@ -1,4 +1,5 @@
 /*! tailwindcss v4.0.6 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -375,6 +376,8 @@
       --font-mono--font-variation-settings
     );
     --color-red: hsl(348, 97%, 39%);
+    --color-coral: #f08080;
+    --font-Arimo: 'Arimo', sans-serif;
   }
 }
 @layer base {
@@ -711,8 +714,11 @@
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
-  .mt-15 {
-    margin-top: calc(var(--spacing) * 15);
+  .mt-30 {
+    margin-top: calc(var(--spacing) * 30);
+  }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
   }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
@@ -725,6 +731,9 @@
   }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
   }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
@@ -840,6 +849,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -1489,17 +1501,11 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-coral {
+    background-color: var(--color-coral);
+  }
   .bg-green-400 {
     background-color: var(--color-green-400);
-  }
-  .bg-pink-300 {
-    background-color: var(--color-pink-300);
-  }
-  .bg-pink-400 {
-    background-color: var(--color-pink-400);
-  }
-  .bg-pink-400\/80 {
-    background-color: color-mix(in oklab, var(--color-pink-400) 80%, transparent);
   }
   .bg-purple-900 {
     background-color: var(--color-purple-900);
@@ -1528,8 +1534,8 @@
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\/images\/bg-intro-desktop\.png\)\] {
-    background-image: url(/images/bg-intro-desktop.png);
+  .bg-\[url\(\.\/bg-intro-desktop\.png\)\] {
+    background-image: url(./bg-intro-desktop.png);
   }
   .bg-none {
     background-image: none;
@@ -1736,9 +1742,16 @@
   .align-top {
     vertical-align: top;
   }
+  .font-Arimo {
+    font-family: var(--font-Arimo);
+  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -1993,6 +2006,9 @@
   }
   .scheme-only-light {
     color-scheme: only light;
+  }
+  .bg-blend-darken {
+    background-blend-mode: darken;
   }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
@@ -2299,19 +2315,49 @@
       }
     }
   }
+  .sm\:mt-20 {
+    @media (width >= 300px) {
+      margin-top: calc(var(--spacing) * 20);
+    }
+  }
   .sm\:ml-5 {
     @media (width >= 300px) {
       margin-left: calc(var(--spacing) * 5);
     }
   }
+  .sm\:ml-8 {
+    @media (width >= 300px) {
+      margin-left: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:flex {
+    @media (width >= 300px) {
+      display: flex;
+    }
+  }
+  .sm\:items-center {
+    @media (width >= 300px) {
+      align-items: center;
+    }
+  }
+  .sm\:justify-center {
+    @media (width >= 300px) {
+      justify-content: center;
+    }
+  }
+  .lg\:mt-3 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 3);
+    }
+  }
+  .lg\:mt-28 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 28);
+    }
+  }
   .lg\:mt-30 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 30);
-    }
-  }
-  .lg\:mt-40 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * 40);
     }
   }
   .lg\:flex {

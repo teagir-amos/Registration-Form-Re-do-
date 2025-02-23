@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 @theme{
     --breakpoint-sm: 300px;
     --color-red: hsl(348, 97%, 39%);
+    --color-coral: #f08080;
+    --font-Arimo: 'Arimo', sans-serif;
 }
